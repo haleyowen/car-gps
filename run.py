@@ -9,8 +9,7 @@ def hello_monkey():
     """Respond to incoming calls with a simple text message."""
 
     resp = MessagingResponse().message("Hello, Mobile Monkey")
-    print resp
-    return str(resp)
+    return "<?xml version="1.0" encoding="UTF-8"?><Response><Message>Hello, Mobile Monkey</Message></Response>"
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
