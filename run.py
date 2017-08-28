@@ -1,6 +1,6 @@
 import os
 from flask import Flask, request, redirect
-from twilio.twiml.messaging_response import MessagingResponse
+from twilio.twiml.messaging_response import MessagingResponse, Message
 
 app = Flask(__name__)
 
@@ -9,6 +9,7 @@ def hello_monkey():
     """Respond to incoming calls with a simple text message."""
 
     resp = MessagingResponse().message("Hello, Mobile Monkey")
+    print resp
     return str(resp)
 
 if __name__ == "__main__":
